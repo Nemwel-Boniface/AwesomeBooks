@@ -4,7 +4,10 @@ const bkTitle = document.getElementById('title');
 const bkAuthor = document.getElementById('author');
 const form = document.getElementById('form');
 let id = 0;
-const books = [];
+let books = [];
+if (localStorage.getItem('Data-base') !== null) {
+  books = JSON.parse(localStorage.getItem('Data-base'));
+}
 
 function addBook(elem) {
   books.push({
@@ -14,7 +17,6 @@ function addBook(elem) {
   });
   id = id + 1;
   elem.preventDefault();
-  let Books = JSON.parse(localStorage.getItem('books')) || [];
 
   let li = document.createElement('li');
   li.setAttribute('id', `${id}`);
@@ -34,4 +36,12 @@ function addBook(elem) {
   bklist.appendChild(li);
 
   btnRemove.addEventListener('click', removeBook);
+  localStorage.setItem('Data-base', JSON.stringify(books));
+}
+
+form.addEventListener('submit', addBook);
+
+function removeBook(r) {
+  r.target.parentElement.remove();
+  localStorage.setItem('Data-base', JSON.stringify(books));
 }
