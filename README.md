@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# PERSONAL PORTFOLIO
+# Awesome Books
 
 > Awesome books is a simple project that displays new books when a user updates them.
 
