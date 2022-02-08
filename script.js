@@ -1,4 +1,3 @@
-const body = document.querySelector('body');
 const bklist = document.querySelector('.bklist');
 const bkTitle = document.getElementById('title');
 const bkAuthor = document.getElementById('author');
@@ -9,16 +8,22 @@ if (localStorage.getItem('Data-base') !== null) {
   books = JSON.parse(localStorage.getItem('Data-base'));
 }
 
+function removeBook(r) {
+  r.target.parentElement.remove();
+  books.splice(r, 1);
+  localStorage.setItem('Data-base', JSON.stringify(books));
+}
+
 function addBook(elem) {
   books.push({
-    id: id,
+    id,
     title: bkTitle.value,
     author: bkAuthor.value,
   });
-  id = id + 1;
+  id += 1;
   elem.preventDefault();
 
-  let li = document.createElement('li');
+  const li = document.createElement('li');
   li.setAttribute('id', `${id}`);
 
   const titleTxt = document.createElement('li');
@@ -37,14 +42,8 @@ function addBook(elem) {
 
   btnRemove.addEventListener('click', removeBook);
   localStorage.setItem('Data-base', JSON.stringify(books));
-  bkAuthor.value = "";
-  bkTitle.value = "";
+  bkAuthor.value = '';
+  bkTitle.value = '';
 }
 
 form.addEventListener('submit', addBook);
-
-function removeBook(r) {
-  r.target.parentElement.remove();
-  books.splice(r,1)
-  localStorage.setItem('Data-base', JSON.stringify(books));
-}
