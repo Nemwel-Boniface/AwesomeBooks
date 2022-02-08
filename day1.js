@@ -52,6 +52,7 @@ const deleteBook = (id) => {
     if (book.id === id) {
       return books.splice(index, 1);
     }
+    return books.splice(index, 1);
   });
   localStorage.setItem('booksDetails', JSON.stringify(books));
 };
