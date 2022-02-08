@@ -37,11 +37,14 @@ function addBook(elem) {
 
   btnRemove.addEventListener('click', removeBook);
   localStorage.setItem('Data-base', JSON.stringify(books));
+  bkAuthor.value = "";
+  bkTitle.value = "";
 }
 
 form.addEventListener('submit', addBook);
 
 function removeBook(r) {
   r.target.parentElement.remove();
+  books.splice(r,1)
   localStorage.setItem('Data-base', JSON.stringify(books));
 }
