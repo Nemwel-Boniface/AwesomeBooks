@@ -1,2 +1,5 @@
 # .gitignore
 node_modules/
+.vscode
+script.js
+package-lock.json
