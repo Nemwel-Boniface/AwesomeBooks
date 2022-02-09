@@ -1,4 +1,4 @@
-const bklist = document.querySelector('.bookswrapper');
+const bklist = document.querySelector('.books-wrapper');
 const bkTitle = document.getElementById('title');
 const bkAuthor = document.getElementById('author');
 const addBtn = document.querySelector('.add-btn');
@@ -69,3 +69,12 @@ class Library {
   }
 
 }
+const myLib = new Library();
+addBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  myLib.addBook(bkTitle.value, bkAuthor.value);
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  myLib.getLocalStorage();
+})
