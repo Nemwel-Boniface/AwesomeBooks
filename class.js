@@ -7,12 +7,12 @@ class Library {
   constructor() {
     this.books = [
       {
-        title: 'Manger',
-        author: 'Cuisinier',
+        title: 'Things Fall Apart',
+        author: 'Chinua Achebe',
       },
       {
-        title: 'Baron',
-        author: 'Fredrick',
+        title: 'The Way Of Men',
+        author: 'Jack Donovan',
       },
     ];
   }
