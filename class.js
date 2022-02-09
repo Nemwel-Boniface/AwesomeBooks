@@ -13,7 +13,7 @@ class Library {
       {
         title: 'Baron',
         author: 'Fredrick',
-      }
+      },
     ];
   }
 
@@ -30,16 +30,14 @@ class Library {
   getLocalStorage() {
     if (localStorage.getItem('Data-base')) {
       this.books = JSON.parse(localStorage.getItem('Data-base'));
-    } else {
-      this.books =  this.books;
     }
     this.displayBooks();
   }
 
   addBook(title, author) {
     this.books.push({
-      title: title,
-      author: author,
+      title,
+      author,
     });
 
     bkAuthor.value = '';
@@ -50,31 +48,29 @@ class Library {
 
   displayBooks() {
     bklist.innerHTML = '';
-    this.books.forEach((book, index)  => {
-    const li = document.createElement('li');
-    const description = document.createElement('p');
+    this.books.forEach((book, index) => {
+      const li = document.createElement('li');
+      const description = document.createElement('p');
 
-    const btnRemove = document.createElement('button');
-    description.textContent = `"${book.title}" by ${book.author}`;
-    btnRemove.textContent = 'remove';
-    btnRemove.classList.add('remove');
+      const btnRemove = document.createElement('button');
+      description.textContent = `"${book.title}" by ${book.author}`;
+      btnRemove.textContent = 'remove';
+      btnRemove.classList.add('remove');
 
-    li.append(description, btnRemove);
-    btnRemove.addEventListener('click', () => {
-      this.removeBook(index);
-    })
-    bklist.appendChild(li);
-
-    })
+      li.append(description, btnRemove);
+      btnRemove.addEventListener('click', () => {
+        this.removeBook(index);
+      });
+      bklist.appendChild(li);
+    });
   }
-
 }
 const myLib = new Library();
 addBtn.addEventListener('click', (event) => {
   event.preventDefault();
   myLib.addBook(bkTitle.value, bkAuthor.value);
-})
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   myLib.getLocalStorage();
-})
+});
