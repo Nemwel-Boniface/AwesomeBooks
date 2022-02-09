@@ -47,3 +47,22 @@ cursor: pointer;
     flex-direction: column;
 }
 
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.books-wrapper, .add-btn, input, .remove {
+    border: 3px solid black;
+    text-transform: capitalize;
+}
+li:nth-child(odd) {
+    background-color: rgb(223, 219, 219);
+    color: #000;
+  }
+
+h2 {
+    border-top: 1.6px solid black;
+    padding-top: 20px;
+}
+
