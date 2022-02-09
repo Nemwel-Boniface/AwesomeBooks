@@ -6,13 +6,20 @@ const dynamicBooksDiv = document.getElementById('books-wrapper');
 const books = JSON.parse(localStorage.getItem('booksDetails')) || [];
 
 const addBook = (title, author, id) => {
-  books.push({
+  const loadedBooks = JSON.parse(localStorage.getItem('booksDetails')) || [];
+  loadedBooks.push({
     title,
     author,
     id,
   });
-  localStorage.setItem('booksDetails', JSON.stringify(books));
+  localStorage.setItem('booksDetails', JSON.stringify(loadedBooks));
   return { title, author, id };
+};
+
+const deleteBook = (id) => {
+  const mybooks = JSON.parse(localStorage.getItem('booksDetails'));
+  const filteredBooks = mybooks.filter((book) => book.id !== id);
+  localStorage.setItem('booksDetails', JSON.stringify(filteredBooks));
 };
 
 const createBook = ({ title, author, id }) => {
@@ -28,6 +35,10 @@ const createBook = ({ title, author, id }) => {
   removeBtn.dataset.id = id;
   removeBtn.type = 'button';
   removeBtn.className = 'removeBtn';
+  removeBtn.addEventListener('click', () => {
+    deleteBook(id);
+    dynamicBooksDiv.removeChild(div);
+  });
 
   div.append(h3, h4, removeBtn);
   dynamicBooksDiv.appendChild(div);
@@ -45,16 +56,6 @@ formContainer.onsubmit = (e) => {
   bookTitle.value = '';
   bookAuthor.value = '';
   id = '';
-};
-
-const deleteBook = (id) => {
-  books.filter((book, index) => {
-    if (book.id === id) {
-      return books.splice(index, 1);
-    }
-    return books.splice(index, 1);
-  });
-  localStorage.setItem('booksDetails', JSON.stringify(books));
 };
 
 document.querySelectorAll('.removeBtn').forEach((removeBtn) => {
