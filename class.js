@@ -57,7 +57,7 @@ class Library {
     const btnRemove = document.createElement('button');
     description.textContent = `"${book.title}" by ${book.author}`;
     btnRemove.textContent = 'remove';
-
+    btnRemove.classList.add('remove');
 
     li.append(description, btnRemove);
     btnRemove.addEventListener('click', () => {
