@@ -46,7 +46,6 @@
 
 .section1 {
   margin-top: 10vh;
-  /* width: 500px; */
   height: auto;
 }
 
@@ -56,6 +55,16 @@
   height: 200px;
 }
 
+.section3 ul {
+  display: flex;
+}
+.section3 ul li {
+  margin: auto 0;
+}
+.section3 ul li ul {
+  display: block;
+  list-style-type: circle;
+}
 form {
   width: 100%;
   gap: 10px;
@@ -131,4 +140,12 @@ h2 {
     border: 0.7px solid white;
     border-radius: 7%;
     padding: 4px;
+}
+
+/*time container*/
+
+.time-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 5% 0 0;
 }
