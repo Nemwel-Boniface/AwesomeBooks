@@ -60,6 +60,11 @@ Live site URL to Our Awesome Books
 - Twitter: [@nemwel_bonie](https://twitter.com/nemwel_bonie)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nemwel-nyandoro-aa1b2620b/)
 
+👤 **Author2**
+
+- GitHub: [@brahimdidi ](https://github.com/brahimdidi)
+- Twitter: [@brahimdidi](https://twitter.com/brahimdidi)
+
 
 ## 🤝 Contributing
 
