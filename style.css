@@ -4,8 +4,58 @@
   box-sizing: border-box;
 }
 
+h2 {
+  border-top: 1.6px solid black;
+  padding-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #000;
+  align-items: center;
+  padding: 12px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.nav h2 {
+  border: none;
+  font-size: 28px;
+  padding: 1%;
+}
+
+.nav ul {
+  display: flex;
+  width: 40%;
+}
+
+.nav ul li {
+  list-style-type: none;
+  border-right: 3px solid #000;
+  width: 30%;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+.nav ul .nobd {
+  border-right: none;
+}
+
 .section1,
-.section2 {
+.section2,
+.section3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,14 +66,30 @@
 
 .section1 {
   margin-top: 10vh;
-  width: 500px;
   height: auto;
 }
 
 .section2 {
-  margin-top: 3vh;
+  margin-top: 10%;
   max-width: 300px;
   height: 200px;
+}
+
+.section3 p {
+  margin: 20px 0;
+}
+
+.section3 ul {
+  display: flex;
+}
+
+.section3 ul li {
+  margin: auto 0;
+}
+
+.section3 ul li ul {
+  display: block;
+  list-style-type: circle;
 }
 
 form {
@@ -48,18 +114,15 @@ input {
 .remove {
   width: 18%;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .books-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-li {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
+  max-width: 800px;
 }
 
 .books-wrapper,
@@ -70,12 +133,37 @@ input,
   text-transform: capitalize;
 }
 
-li:nth-child(odd) {
+.books-wrapper li:nth-child(odd) {
   background-color: rgb(223, 219, 219);
   color: #000;
 }
 
-h2 {
-  border-top: 1.6px solid black;
-  padding-top: 20px;
+.footer {
+  border: 3px solid #000;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 2%;
+  left: 4%;
+  width: 90%;
+}
+
+.dis-none {
+  display: none;
+}
+
+.active-btn {
+  background-color: black;
+  color: white;
+  border: 0.7px solid white;
+  border-radius: 7%;
+  padding: 4px;
+}
+
+/* time container */
+
+.time-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 5% 0 0;
 }

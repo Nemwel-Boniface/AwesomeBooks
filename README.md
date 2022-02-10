@@ -3,6 +3,9 @@
 # Awesome Books
 
 > Awesome books is a simple project that displays new books when a user updates them.
+![screenshot](./images/spaadd.png)
+![screenshot](./images/spaList.png)
+![screenshot](./images/spacontact.png)
 
 
 ## Built With
@@ -33,7 +36,7 @@ Live site URL to Our Awesome Books
 ### Install
 
 - Open your command prompt or terminal and run.
-- git clone git@github.com:Nemwel-Boniface/personal-portfolio.git .
+- git clone git@github.com:Nemwel-Boniface/AwesomeBooks.git .
 
 
 ### Run tests
@@ -56,6 +59,11 @@ Live site URL to Our Awesome Books
 - GitHub: [@Nemwel-Boniface ](https://github.com/Nemwel-Boniface)
 - Twitter: [@nemwel_bonie](https://twitter.com/nemwel_bonie)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nemwel-nyandoro-aa1b2620b/)
+
+👤 **Author2**
+
+- GitHub: [@brahimdidi ](https://github.com/brahimdidi)
+- Twitter: [@brahimdidi](https://twitter.com/brahimdidi)
 
 
 ## 🤝 Contributing
