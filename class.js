@@ -2,6 +2,7 @@ const bklist = document.querySelector('.books-wrapper');
 const bkTitle = document.getElementById('title');
 const bkAuthor = document.getElementById('author');
 const addBtn = document.querySelector('.add-btn');
+const time = document.querySelector('.time');
 
 class Library {
   constructor() {
@@ -86,7 +87,7 @@ const listBtn = document.getElementById('list');
 const addNewBtn = document.getElementById('addNew');
 const contactBtn = document.getElementById('contact');
 
-// functions for spi 
+// functions for SPA
 
 const listShow = () => {
   section1.classList.remove('dis-none');
@@ -112,5 +113,30 @@ const contactShow = () => {
   addNewBtn.classList.remove('active-btn');
   listBtn.classList.remove('active-btn');
 }
+contactBtn.addEventListener('click',contactShow);
+listBtn.addEventListener('click',listShow);
+addNewBtn.addEventListener('click',addNewShow);
 
+const setTime = () => {
+  const date = new Date();
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  const day = date.getDate();
+  let minutes = date.getMinutes();
+  const hours = date.getHours();
+  let seconds = date.getSeconds();
+
+  if (seconds.toString().length < 2) {
+    seconds = `0${seconds}`;
+  }
+  if (minutes.toString().length < 2) {
+    minutes = `0${minutes}`;
+  }
+
+  const currentTime = `${month} ${day}th ${year}, ${hours}:${minutes}:${seconds}`;
+  time.textContent = '';
+  time.textContent = `${currentTime}`;
+};
+setTime();
 
