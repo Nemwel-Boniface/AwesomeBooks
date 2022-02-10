@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+h2 {
+  border-top: 1.6px solid black;
+  padding-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -13,20 +25,24 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+
 .nav h2 {
-    border: none;
-    font-size: 28px;
-    padding: 1%;
+  border: none;
+  font-size: 28px;
+  padding: 1%;
 }
+
 .nav ul {
   display: flex;
   width: 40%;
 }
+
 .nav ul li {
   list-style-type: none;
   border-right: 3px solid #000;
   width: 30%;
 }
+
 .nav ul li a {
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -55,16 +71,23 @@
   height: 200px;
 }
 
+.section3 p {
+  margin: 20px 0;
+}
+
 .section3 ul {
   display: flex;
 }
+
 .section3 ul li {
   margin: auto 0;
 }
+
 .section3 ul li ul {
   display: block;
   list-style-type: circle;
 }
+
 form {
   width: 100%;
   gap: 10px;
@@ -98,12 +121,6 @@ input {
   max-width: 800px;
 }
 
-li {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-}
-
 .books-wrapper,
 .add-btn,
 input,
@@ -117,11 +134,6 @@ input,
   color: #000;
 }
 
-h2 {
-  border-top: 1.6px solid black;
-  padding-top: 20px;
-}
-
 .footer {
   border: 3px solid #000;
   text-align: center;
@@ -131,18 +143,20 @@ h2 {
   left: 4%;
   width: 90%;
 }
+
 .dis-none {
-    display: none;
-}
-.active-btn {
-    background-color: black;
-    color: white;
-    border: 0.7px solid white;
-    border-radius: 7%;
-    padding: 4px;
+  display: none;
 }
 
-/*time container*/
+.active-btn {
+  background-color: black;
+  color: white;
+  border: 0.7px solid white;
+  border-radius: 7%;
+  padding: 4px;
+}
+
+/* time container */
 
 .time-div {
   display: flex;

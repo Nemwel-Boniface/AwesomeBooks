@@ -78,11 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // day3 javascript full app look
 
-const nav = document.querySelector('.nav');
 const section1 = document.querySelector('.section1');
 const section2 = document.querySelector('.section2');
 const section3 = document.querySelector('.section3');
-const footer = document.querySelector('.footer');
 const listBtn = document.getElementById('list');
 const addNewBtn = document.getElementById('addNew');
 const contactBtn = document.getElementById('contact');
@@ -96,7 +94,7 @@ const listShow = () => {
   listBtn.classList.add('active-btn');
   addNewBtn.classList.remove('active-btn');
   contactBtn.classList.remove('active-btn');
-}
+};
 const addNewShow = () => {
   section2.classList.remove('dis-none');
   section1.classList.add('dis-none');
@@ -104,7 +102,7 @@ const addNewShow = () => {
   addNewBtn.classList.add('active-btn');
   listBtn.classList.remove('active-btn');
   contactBtn.classList.remove('active-btn');
-}
+};
 const contactShow = () => {
   section3.classList.remove('dis-none');
   section1.classList.add('dis-none');
@@ -112,10 +110,10 @@ const contactShow = () => {
   contactBtn.classList.add('active-btn');
   addNewBtn.classList.remove('active-btn');
   listBtn.classList.remove('active-btn');
-}
-contactBtn.addEventListener('click',contactShow);
-listBtn.addEventListener('click',listShow);
-addNewBtn.addEventListener('click',addNewShow);
+};
+contactBtn.addEventListener('click', contactShow);
+listBtn.addEventListener('click', listShow);
+addNewBtn.addEventListener('click', addNewShow);
 
 const setTime = () => {
   const date = new Date();
@@ -139,4 +137,3 @@ const setTime = () => {
   time.textContent = `${currentTime}`;
 };
 setTime();
-
