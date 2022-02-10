@@ -49,6 +49,10 @@ li {
   font-size: 20px;
 }
 
+.nav ul .nobd {
+  border-right: none;
+}
+
 .section1,
 .section2,
 .section3 {

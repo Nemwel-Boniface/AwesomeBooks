@@ -36,7 +36,7 @@ Live site URL to Our Awesome Books
 ### Install
 
 - Open your command prompt or terminal and run.
-- git clone git@github.com:Nemwel-Boniface/personal-portfolio.git .
+- git clone git@github.com:Nemwel-Boniface/AwesomeBooks.git .
 
 
 ### Run tests
