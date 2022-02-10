@@ -74,3 +74,12 @@ addBtn.addEventListener('click', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
   myLib.getLocalStorage();
 });
+
+// day3 javascript full app look
+
+const nav = document.querySelector('.nav');
+const section1 = document.querySelector('.section1');
+const section2 = document.querySelector('.section2');
+const section3 = document.querySelector('.section3');
+const footer = document.querySelector('.footer');
+
