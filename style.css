@@ -3,10 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  
-}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -19,27 +15,27 @@ body {
 }
 .nav h2 {
     border: none;
+    font-size: 28px;
+    padding: 1%;
 }
 .nav ul {
   display: flex;
+  width: 40%;
 }
 .nav ul li {
   list-style-type: none;
   border-right: 3px solid #000;
+  width: 30%;
 }
 .nav ul li a {
   text-decoration: none;
-  color: #000;
-}
-.nav ul li a:hover {
-  color: blue;
-}
-.nav ul li a:active {
-  color: #000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
 }
 
 .section1,
-.section2 {
+.section2,
+.section3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,12 +78,15 @@ input {
 .remove {
   width: 18%;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .books-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 800px;
 }
 
 li {
@@ -125,4 +124,11 @@ h2 {
 }
 .dis-none {
     display: none;
+}
+.active-btn {
+    background-color: black;
+    color: white;
+    border: 0.7px solid white;
+    border-radius: 7%;
+    padding: 4px;
 }
